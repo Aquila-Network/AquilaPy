@@ -4,8 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setuptools.setup(
      name='aquiladb',  
-     version='0.2',
-     scripts=['aquiladb'] ,
+     version='0.5',
      author="Harold Gomez",
      author_email="haroldgmz11@gmail.com",
      description="Python client library for AquilaDB",
