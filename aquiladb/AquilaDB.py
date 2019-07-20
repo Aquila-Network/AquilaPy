@@ -28,7 +28,7 @@ class AquilaClient:
         return response
 
     # helper function to convert native data to API friendly data
-    def convertDocuments(self, vector, document):
+    def convertDocument(self, vector, document):
         return {
             "vector": {
                 "e": vector
