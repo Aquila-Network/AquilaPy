@@ -13,7 +13,7 @@ Python client library for AquilaDB
 from aquiladb import AquilaClient as acl
 
 # create DB instance
-db = = acl('localhost', 50051)
+db = acl('localhost', 50051)
 
 # convert a sample document
 # convertDocument
@@ -27,7 +27,7 @@ vector = db.convertMatrix([0.1,0.2,0.3,0.4])
 
 # perform k-NN from AquilaDB
 k = 10
-result = db.getNearest(m, k)
+result = db.getNearest(vector, k)
 ```
 
 # AquilaDB
