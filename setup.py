@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 # setup package
 setuptools.setup(
     name='aquiladb',  
-    version='0.5',
+    version='0.5.1',
     author="Harold Gomez",
     author_email="haroldgmz11@gmail.com",
     description="Python client library for AquilaDB",
