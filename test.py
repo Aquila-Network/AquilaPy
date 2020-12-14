@@ -1,21 +1,10 @@
-# AquilaDB-Python
-
-Python client library for Aquila Network
-
-#### install
-
-`pip install aquilapy`
-
-#### Tutorial
-
-```
 from aquilapy import Wallet, DB
 import numpy as np
 
 # Create a wallet instance from private key
-wallet = Wallet("<path to>/openssl/private_unencrypted.pem")
+wallet = Wallet("private_unencrypted.pem")
 
-# Connect to a running AquilaDB instance
+# Connect to AquilaDB instance
 db = DB("http://127.0.0.1", "5000", wallet)
 
 # Schema definition to be used
@@ -59,11 +48,8 @@ dids = db.delete_documents(db_name, dids)
 print(dids)
 
 # Perform a similarity search operation
-matrix = np.random.rand(1, 784).tolist()
+matrix = np.random.rand(1, 3).tolist()
 
 docs, dists = db.search_k_documents(db_name, matrix, 10)
 
 print(len(docs[0]), len(dists[0]))
-```
-
-created with ❤️ a-mma.indic (a_മ്മ)

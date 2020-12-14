@@ -6,19 +6,16 @@ with open("README.md", "r") as fh:
 
 # setup package
 setuptools.setup(
-    name='aquiladb',  
-    version='0.5.1',
-    author="Harold Gomez",
-    author_email="haroldgmz11@gmail.com",
-    description="Python client library for AquilaDB",
+    name='aquilapy',  
+    version='0.3',
+    author="Aquila Network",
+    author_email="contact@aquila.network",
+    description="Python client library for Aquila Network",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/a-mma/AquilaDB-Python",
+    url="https://github.com/Aquila-Network/aquilapy",
     packages=setuptools.find_packages(),
-    install_requires=[
-      'grpcio',
-      'protobuf'
-    ],
+    install_requires=[],
     classifiers=[
       "Programming Language :: Python :: 3",
       "License :: OSI Approved :: MIT License",
