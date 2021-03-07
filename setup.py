@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 # setup package
 setuptools.setup(
     name='aquilapy',  
-    version='0.3',
+    version='0.3.1',
     author="Aquila Network",
     author_email="contact@aquila.network",
     description="Python client library for Aquila Network",
