@@ -1,20 +1,9 @@
-# AquilaDB-Python
-
-Python client library for Aquila Network
-
-#### install
-
-`pip install aquilapy`
-
-#### Tutorial
-
-```python
 from aquilapy import Wallet, DB, Hub
 import numpy as np
 import time
 
 # Create a wallet instance from private key
-wallet = Wallet("private_unencrypted.pem")
+wallet = Wallet("/root/aquilax/ossl/private_unencrypted.pem")
 
 host = "http://127.0.0.1"
 
@@ -27,7 +16,7 @@ hub = Hub(host, "5002", wallet)
 # Schema definition to be used
 schema_def = {
     "description": "this is my database",
-    "unique": "r8and0mseEd901",
+    "unique": "r8and0mseEd9021",
     "encoder": "ftxt:https://ftxt-models.s3.us-east-2.amazonaws.com/ftxt_base_min.bin",
     "codelen": 25,
     "metadata": {
@@ -57,7 +46,7 @@ docs = [{
     },
     "code": compression[0]
 }, {
-        "metadata": {
+    "metadata": {
         "name":"name2", 
         "age": 30
     },
@@ -82,6 +71,3 @@ time.sleep(5)
 docs, dists = db.search_k_documents(db_name, matrix, 10)
 
 print(len(docs[0]), len(dists[0]))
-```
-
-created with ❤️ a-mma.indic (a_മ്മ)

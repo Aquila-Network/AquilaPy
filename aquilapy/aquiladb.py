@@ -51,8 +51,27 @@ class DB:
         else:
             return None
 
+    # Parse and sign each document in the documents array
+    def sign_documents (self, documents):
+        ret_docs = []
+
+        for doc in documents:
+            data_bson = bson.dumps(doc)
+            signature = self.wallet.sign_bson_data(data_bson)
+            data = {
+                "payload": doc,
+                "signature": signature
+            }
+            ret_docs.append(data)
+
+        return ret_docs
+
+
     # Insert docs according to schema definition
     def insert_documents (self, database_name, documents):
+        # sign each document
+        documents = self.sign_documents(documents)
+
         data_ = { "docs": documents, "database_name": database_name }
         data_bson = bson.dumps(data_)
         signature = self.wallet.sign_bson_data(data_bson)
