@@ -17,7 +17,7 @@ hub = Hub(host, "5002", wallet)
 schema_def = {
     "description": "this is my database",
     "unique": "r8and0mseEd901",
-    "encoder": "ftxt:https://ftxt-models.s3.us-east-2.amazonaws.com/ftxt_base_min.bin",
+    "encoder": "ftxt:https://ftxt-models.s3.us-east-2.amazonaws.com/wiki_100d_en.bin",
     "codelen": 25,
     "metadata": {
         "name": "string",
