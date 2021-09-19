@@ -30,6 +30,7 @@ Here is a bird's eye view of where Aquila Client Libraries fit in the entire eco
     height="400"
   />
  <br/>
+</div>
 
 #### install
 
